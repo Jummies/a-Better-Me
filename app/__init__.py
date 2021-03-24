@@ -5,9 +5,16 @@ from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 from flask_login import LoginManager
 
-from .models import db, User
+import boto3
+from botocore.config import Config
+import json
+
+from .models import db, User, Post
 from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
+from .api.post_routes import post_routes
+from .api.postLike_routes import postLike_routes
+from .api.comment_routes import comment_routes
 
 from .seeds import seed_commands
 
@@ -31,6 +38,9 @@ app.cli.add_command(seed_commands)
 app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
+app.register_blueprint(post_routes, url_prefix='/api/posts')
+app.register_blueprint(postLike_routes, url_prefix='/api/postLikes')
+app.register_blueprint(comment_routes, url_prefix='/api/comments')
 db.init_app(app)
 Migrate(app, db)
 
@@ -71,3 +81,28 @@ def react_root(path):
     if path == 'favicon.ico':
         return app.send_static_file('favicon.ico')
     return app.send_static_file('index.html')
+
+
+#testing
+@app.route('/sign_s3/')
+def sign_s3():
+    S3_BUCKET = os.environ.get('S3_BUCKET')
+
+    file_name = request.args.get('file_name')
+    file_type = request.args.get('file_type')
+    s3 = boto3.client('s3', config=Config(
+        signature_version='s3v4', region_name="us-east-2"))
+
+    presigned_post = s3.generate_presigned_post(
+        Bucket=S3_BUCKET,
+        Key=file_name,
+        Fields={"acl": "public-read", "Content-Type": file_type},
+        Conditions=[
+            {"acl": "public-read"},
+            {"Content-Type": file_type}
+        ],
+    )
+    return json.dumps({
+        'data': presigned_post,
+        'url': 'https://%s.s3.amazonaws.com/' % (S3_BUCKET)
+    })
