@@ -1,0 +1,66 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 1rem;
+  background-color: rgb(255, 255, 255);
+  opacity: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar__logocontainer {
+  background-color: white;
+}
+.navbar__navicons {
+  background-color: white;
+}
+.navbar__icon {
+  width: 1rem;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+
+  /* font-size: 1.5rem; */
+  padding: 0.3rem;
+
+  /* margin: 0.1rem; */
+  margin-bottom: 0.3rem;
+  background-color: white;
+  cursor: pointer;
+}
+.navbar__logo {
+  font-family: 'Lobster Two', cursive;
+  background-color: white;
+}
+
+.navbar__search {
+  border: 1px solid lightgray;
+  border-radius: 0.2rem;
+  margin-bottom: 0.8rem;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__searchfield {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  padding: 0.3rem;
+  border: none;
+}
+.navbar__searchfield:focus {
+  outline-width: 0;
+}
+
+.logoutButton {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'proxima-nova', sans-serif;
+  color: black;
+  outline: none;
+  cursor: pointer;
+  padding-left: 0.1rem;
+}
+

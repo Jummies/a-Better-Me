@@ -15,6 +15,7 @@ from .api.auth_routes import auth_routes
 from .api.post_routes import post_routes
 from .api.postLike_routes import postLike_routes
 from .api.comment_routes import comment_routes
+from .api.postCritic_routes import postCritic_routes
 
 from .seeds import seed_commands
 
@@ -41,6 +42,7 @@ app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(post_routes, url_prefix='/api/posts')
 app.register_blueprint(postLike_routes, url_prefix='/api/postLikes')
 app.register_blueprint(comment_routes, url_prefix='/api/comments')
+app.register_blueprint(postCritic_routes, url_prefix='/api/postCritics')
 db.init_app(app)
 Migrate(app, db)
 

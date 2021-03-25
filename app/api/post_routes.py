@@ -32,8 +32,9 @@ def new_post():
     private = data['isPrivate']
     imagePath = data['url']
     userId = data['userId']
+    criticId = 0
     new_post = Post(description=description, private=private,
-                    imagePath=imagePath, userId=userId)
+                    imagePath=imagePath, userId=userId, criticId=criticId)
     db.session.add(new_post)
     db.session.commit()
     return(data)
@@ -67,3 +68,23 @@ def delete_post(id):
     db.session.delete(post)
     db.session.commit()
     return 'Post Deleted'
+
+
+@post_routes.route('/user/<int:id>', methods=['POST'])
+def new_post_critic(id):
+    data = request.get_json()
+    print(data)
+    description = data['description']
+    private = data['isPrivate']
+    imagePath = data['url']
+    
+    userId = id
+
+    if(data['userId']): criticId = data['userId']
+    else: criticId = 0
+
+    new_post = Post(description=description, private=private,
+                    imagePath=imagePath, userId=userId, criticId=criticId)
+    db.session.add(new_post)
+    db.session.commit()
+    return(data)

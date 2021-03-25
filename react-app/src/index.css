@@ -1,1 +1,44 @@
 /* TODO Add site wide styles */
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  
+}
+* {
+    margin: 0;
+    padding: 0;
+
+}
+* button {
+    border: none;
+    background: none;
+}
+
+.app__body {
+  display: flex;
+  height: calc(100vh);
+
+  background-image: url('https://cdn.discordapp.com/attachments/537497024958824480/824580397966295070/unknown.png');
+  background-size: cover;
+/*   
+  overflow-x: hidden; */
+
+  z-index: 0;
+}
+
+.app__main {
+
+  width: 90%;
+
+
+  overflow-y: scroll;
+  /* box-shadow: inset 0 0 20px #2c2c2c70; */
+
+
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 0;  
+  background: transparent;  
+}

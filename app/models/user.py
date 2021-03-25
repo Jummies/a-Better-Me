@@ -24,6 +24,7 @@ class User(db.Model, UserMixin):
     posts = db.relationship("Post", back_populates="user")
     postLikes = db.relationship("PostLike", back_populates="user")
     comments = db.relationship("Comment", back_populates="user")
+    postCritics = db.relationship("PostCritic", back_populates="user")
 
     date_created  = db.Column(db.DateTime,  default=db.func.current_timestamp())
     date_modified = db.Column(db.DateTime,  default=db.func.current_timestamp(),onupdate=db.func.current_timestamp())

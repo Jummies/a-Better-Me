@@ -1,0 +1,107 @@
+.profile__container{
+  display:flex;
+  flex-direction: row-reverse;
+}
+
+
+.profile__right {
+  height: 400px;
+  width: 500px;
+  margin: 50px;
+  margin-top: 200px;
+
+  border-radius: 10px;
+
+
+  position: fixed;
+}
+
+.profile__left {
+  width: 600px;
+  margin: 50px;
+  margin-top: 100px;
+  margin-right: 600px;
+
+  border-radius: 10px;
+
+
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__pic {
+
+  /* justify-self: center;
+  align-self: center; */
+
+
+  position: absolute;
+  margin-top: -70px;
+
+  z-index: 10;
+  
+}
+
+
+
+.profile__pic img {
+  width: 130px;
+  height: 130px;
+  border: 5px solid white;
+
+  border-radius: 50%;
+  position: fixed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile__pic img:hover {
+  opacity: 50%;
+}
+
+.profile__name {
+  font-size: 40px;
+  color: white;
+  height: 60px;
+  margin-top: -50px;
+  margin-left: 160px;
+}
+
+
+.moveTheFollowButton {
+  /* position: absolute; */
+  margin-left: 150px;
+  margin-top: 15px;
+}
+
+.moveTheFollowButton button {
+  border-color: rgba(var(--d69, 0, 149, 246), 1);
+  background-color: rgba(255, 255, 255, .3);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 12px;
+  width: 100px;
+  border-radius: 40px;
+  font-size: 16px;
+}
+
+.profile__bio {
+  color: white;
+  margin-top: 36px;
+  font-size: 20px;
+}
+
+.postmodal__container {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 550px;
+  height: 50px;
+  margin-left: 5px;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 20px;
+  color:rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+.profile__postbutton {
+ 
+}

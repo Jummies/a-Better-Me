@@ -8,21 +8,24 @@ def seed_posts():
         description="First post by demo", 
         private=False, 
         imagePath = "https://adoxx-org.github.io/GO0DMAN-Innovation-Shop/assets/images/demo_teaser.png",
-        userId = 1
+        userId = 1,
+        criticId = 0
     )
 
     second = Post(
         description="hi this is a description", 
         private=False, 
         imagePath = "https://media.istockphoto.com/vectors/vector-logo-letter-j-glitch-distortion-vector-id1008253498",
-        userId = 2
+        userId = 2,
+        criticId = 0
     )
 
     third = Post(
         description="sup", 
         private=False, 
         imagePath = "https://thumbs.gfycat.com/ZigzagUntidyKatydid-size_restricted.gif",
-        userId = 3
+        userId = 3,
+        criticId = 0
     )
 
     

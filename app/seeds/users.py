@@ -28,9 +28,18 @@ def seed_users():
         profilePicture='https://external-preview.redd.it/mdd8KvJ8AHqe0D_xbxN2_e1vRkmnB287EUVnOefdBBA.jpg?auto=webp&s=91d270e775f19734803c5814e2762ea5e2aa3923'
     )
 
+    sokka = User(
+        username='sokka',
+        email='sokka@aa.io',
+        hashed_password=generate_password_hash('password'),
+        biography="sokka bio here",
+        profilePicture='https://forums.rpgmakerweb.com/data/avatars/o/157/157993.jpg?1585842524'
+    )
+
     db.session.add(demo)
     db.session.add(jummy)
     db.session.add(aang)
+    db.session.add(sokka)
 
     db.session.commit()
 

@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../services/auth';
 
+import { useHistory } from 'react-router-dom'
+import './SignUpForm.css'
+
 const SignUpForm = ({authenticated, setAuthenticated}) => {
+  let history = useHistory()
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
+
+
+  
 
   const onSignUp = async (e) => {
     e.preventDefault();
@@ -38,47 +45,61 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
     return <Redirect to="/" />;
   }
 
+
+
+  const loginRedirect = () => {
+    history.push('/')
+  }
+
   return (
-    <form onSubmit={onSignUp}>
-      <div>
-        <label>User Name</label>
-        <input
-          type="text"
-          name="username"
-          onChange={updateUsername}
-          value={username}
-        ></input>
+    <div className="signUpForm">
+
+      <form onSubmit={onSignUp}>
+        <div>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            onChange={updateUsername}
+            value={username}
+          ></input>
+        </div>
+        <div>
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            onChange={updateEmail}
+            value={email}
+          ></input>
+        </div>
+        <div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={updatePassword}
+            value={password}
+          ></input>
+        </div>
+        <div>
+          <input
+            type="password"
+            name="repeat_password"
+            placeholder="Repeat Password"
+            onChange={updateRepeatPassword}
+            value={repeatPassword}
+            required={true}
+          ></input>
+        </div>
+        <button className="signUpForm__submit" type="submit">Sign Up</button>
+      </form>
+
+      <div className="logincontainer">
+        <span onClick={loginRedirect} style={{ cursor: 'pointer', color: '#0095f6' }}>Log In </span>
       </div>
-      <div>
-        <label>Email</label>
-        <input
-          type="text"
-          name="email"
-          onChange={updateEmail}
-          value={email}
-        ></input>
-      </div>
-      <div>
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          onChange={updatePassword}
-          value={password}
-        ></input>
-      </div>
-      <div>
-        <label>Repeat Password</label>
-        <input
-          type="password"
-          name="repeat_password"
-          onChange={updateRepeatPassword}
-          value={repeatPassword}
-          required={true}
-        ></input>
-      </div>
-      <button type="submit">Sign Up</button>
-    </form>
+
+    </div>
   );
 };
 

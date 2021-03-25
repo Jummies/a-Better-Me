@@ -6,6 +6,7 @@ class NewPostForm(FlaskForm):
     description = TextAreaField('description')
     private = BooleanField('private')
     imagePath = HiddenField('imagePath')
+    criticId = HiddenField('criticId')
 
 
 class EditPostForm(FlaskForm):
