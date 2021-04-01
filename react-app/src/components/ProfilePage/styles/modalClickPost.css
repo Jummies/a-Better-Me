@@ -1,4 +1,4 @@
-.modalPost__container {
+/* .modalPost__container {
     display: flex;
     width: 935px;
     height: 600px;
@@ -76,7 +76,7 @@
     padding-top: 10rem;
     /* border-bottom: 0.5px solid rgb(235, 231, 231);
     border-top: 0.5px solid rgb(235, 231, 231); */
-}
+/* }
 
 .modalPost__title {
     width: 100%;
@@ -96,4 +96,4 @@
     font-size: 1rem;
     color: rgb(168, 167, 167);
     padding-top: 0.8rem;
-}
+} */ 

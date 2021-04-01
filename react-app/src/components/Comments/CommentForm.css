@@ -39,7 +39,11 @@
   border-radius: .6rem; */
   justify-self: center;
   align-items: center;
-  
+  color: rgb(146, 146, 146);
+}
+
+.comment-form__button:hover {
+  opacity: 50%;
 }
 
 .comment-form__icon {

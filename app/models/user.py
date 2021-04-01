@@ -18,7 +18,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(255), nullable = False, unique = True)
     hashed_password = db.Column(db.String(255), nullable = False)
 
-    biography = db.Column(db.String(255))
+    biography = db.Column(db.String(555))
     profilePicture = db.Column(db.String(510))
 
     posts = db.relationship("Post", back_populates="user")

@@ -41,6 +41,32 @@ const Post = ({ post, user }) => {
     }
   }, [setIsLiked, post, user]);
 
+  const checkCritique = () => {
+    if(post.criticId == 0) {
+      return <span>Anonymous</span>
+    } else if(post.criticId == 1) {
+      return <span className='critique_name'>Demo</span>
+    } else if(post.criticId == 2) {
+      return <span className='critique_name'>Jummy</span>
+    } else if(post.criticId == 3) {
+      return <span className='critique_name'>Aang</span>
+    } else if(post.criticId == 4) {
+      return <span className='critique_name'>Sokka</span>
+    } else if(post.criticId == 5) {
+      return <span className='critique_name'>Zuko</span>
+    } else if(post.criticId == 6) {
+      return <span className='critique_name'>Katara</span>
+    } else if(post.criticId == 7) {
+      return <span className='critique_name'>Toph</span>
+    } else if(post.criticId == 8) {
+      return <span className='critique_name'>Iroh</span>
+    } else if(post.criticId == 9) {
+      return <span className='critique_name'>Azula</span>
+    } else if(post.criticId == 10) {
+      return <span className='critique_name'>Cabbage Guy</span>
+    }
+  }
+
   return (
     <div key={post.id} className='post__container'>
 
@@ -63,10 +89,21 @@ const Post = ({ post, user }) => {
 
         <div className='post__main__header'>
           <h2>{post.description}</h2>
+          <div className='post__icon'>
+            <img
+              src={isLiked ? redHeart : blankHeart}
+              alt='post like button'
+              onClick={() => likeHandler()}
+            />
+          {/* {isLiked ? heartFill() : heartEmpty()} */}
+            <span className='post__likes'>
+              {likeCount()}
+            </span>
+          </div>
         </div>
 
         <div className='post__main__footer'>
-          <span className='post__critiqueBy'>Critique by {post.criticId}</span>
+          <span className='post__critiqueBy'>Critique by {checkCritique()}</span>
           <span className='post__createdAt'> on {post.date_created}</span>
         </div>
 
@@ -77,17 +114,7 @@ const Post = ({ post, user }) => {
           </div>
         </div>
 
-        <div className='post__icon'>
-          <img
-            src={isLiked ? redHeart : blankHeart}
-            alt='post like button'
-            onClick={() => likeHandler()}
-          />
-          {/* {isLiked ? heartFill() : heartEmpty()} */}
-          <span className='post__likes'>
-            {likeCount()}
-          </span>
-        </div>
+
 
         <div className='post__comment-form'>
           <CommentForm postId={post.id}/>

@@ -45,7 +45,7 @@ function PostForm({ edit, post, setShowModal }) {
   };
   return (
     <div className='postform__container'>
-      <h2 className='postform__header'>{edit ? "Edit Post" : "Post Form"}</h2>
+      <h2 className='postform__header'>{edit ? "Edit Post" : "Create a Post"}</h2>
       <form className='postform' onSubmit={handleSubmit}>
       {src && <img className="postform__image" src={src} />}
         {!edit && (
@@ -62,15 +62,16 @@ function PostForm({ edit, post, setShowModal }) {
           placeholder='Critique'
           onChange={(e) => setDescription(e.target.value)}
         />
-
+        
         <label className='postform__label'>
           <input
             type='checkbox'
             className='postform__input checkbox'
             checked={isPrivate}
             onChange={(e) => setIsPrivate(e.target.checked)}
-          />
+          /> <div className='checkbox_anon'>Anonymous</div>
         </label>
+        
         <div className='postform__button-container'>
           <button type='submit' className='postform__button'>
             {edit ? "Edit Post" : "Submit"}

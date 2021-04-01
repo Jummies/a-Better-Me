@@ -26,13 +26,13 @@ function StationarySide() {
           {isLoaded &&
             suggestedUsers.map((user) => (
               <>
-                <div className='suggestion__profile' key={user.id}>
+                <div className='suggestion__profile' key={(user && user.id)}>
                   <div className='suggestion__pic'>
-                    <img src={user.profilePicture} alt='profile pic' />
+                    <img src={(user && user.profilePicture)} alt='profile pic' />
                   </div>
                   <div>
                     <div className='suggestion__username'>
-                      <a href={`/profile/${user.id}`}>{user.username}</a>
+                      <a href={`/profile/${(user && user.id)}`}>{(user && user.username)}</a>
                     </div>
                   </div>
                 </div>

@@ -17,17 +17,21 @@ const NavSide = () => {
 
   return (
     <div className='sidenav'>
+      <h4 className='aaa1'>        a Better Me</h4>
+
+      <div className='aaaa'> 
       <NavLink
         className='sidenav__logo'
         exact to='/'
       >
-        <img src='https://cdn.discordapp.com/attachments/537497024958824480/824580738867396629/BMHeart.png' />
+        {/* <img src='https://cdn.discordapp.com/attachments/537497024958824480/824580738867396629/BMHeart.png' /> */}
 
       </NavLink>
 
       <NavLink
         activeClassName='sidenav__links--active'
         className='sidenav__links'
+        className='aaa2'
         to='/'
       >
         <i className='sidenav__icons fas fa-home' />
@@ -46,6 +50,7 @@ const NavSide = () => {
       <NavLink
         activeClassName='sidenav__links--active'
         className='sidenav__links'
+        className='aaa3'
         exact to='/notifications'
       >
         <i className='sidenav__icons fas fa-bell' />
@@ -55,36 +60,23 @@ const NavSide = () => {
       <NavLink
         activeClassName='sidenav__links--active'
         className='sidenav__links'
+        className='aaa4'
         exact to='/settings'
       >
         <i className='sidenav__icons fas fa-cog' />
         
       </NavLink>
 
-      <NavLink
-        activeClassName='sidenav__links--active'
-        className='sidenav__links'
-        exact to='/profile/1'
-      >
-        <i className='sidenav__icons fas fa-cog' />
-        
-      </NavLink>
+      </div>
+      
 
-      <NavLink
-        activeClassName='sidenav__links--active'
-        className='sidenav__links'
-        exact to='/profile/2'
-      >
-        <i className='sidenav__icons fas fa-cog' />
-        
-      </NavLink>
 
       <button
         className='sidenav__logout'
         onClick={handleLogout}
       >
         <i className='sidenav__logout-icon fas fa-sign-out-alt fa-lg' />
-        <span className='sidenav__logout-text'>Log Out</span>
+
       </button>
     </div>
   );

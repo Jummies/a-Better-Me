@@ -28,7 +28,7 @@ function Profile() {
 	const profile = useSelector(state => state.profiles.profile)
 	const posts = useSelector(state => state.posts)
 
-	const userPosts = []
+	let userPosts = []
 
 	useEffect(() => {
     dispatch(postActions.getPosts())
@@ -41,11 +41,13 @@ function Profile() {
 	}, [dispatch])
 
 	if (posts) {
+
 		for (let key in posts) {
 			if (posts[key].userId == id) {
 				userPosts.push(posts[key])
 			}
 		}
+    userPosts = userPosts.reverse();
 	}
 	// 	const [displayCSS, setDisplayCSS] = useState("inline-block")
 	// 	style = {{ display: { displayCSS } }

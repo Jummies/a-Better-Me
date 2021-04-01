@@ -82,12 +82,18 @@
   width: 100px;
   border-radius: 40px;
   font-size: 16px;
+  font-weight: bold;
+}
+
+.moveTheFollowButton button:hover {
+  background-color: rgba(255, 255, 255, 0.623);
 }
 
 .profile__bio {
   color: white;
   margin-top: 36px;
   font-size: 20px;
+  opacity: .7;
 }
 
 .postmodal__container {
@@ -104,4 +110,8 @@
 
 .profile__postbutton {
  
+}
+
+.postmodal__container:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }

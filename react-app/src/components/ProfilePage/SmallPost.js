@@ -40,8 +40,26 @@ export default function SmallPost({ post, user }) {
   const checkCritique = () => {
     if(post.criticId == 0) {
       return <span>Anonymous</span>
-    } else {
-      return <span>User {post.criticId}</span>
+    } else if(post.criticId == 1) {
+      return <span className='critique_name'>Demo</span>
+    } else if(post.criticId == 2) {
+      return <span className='critique_name'>Jummy</span>
+    } else if(post.criticId == 3) {
+      return <span className='critique_name'>Aang</span>
+    } else if(post.criticId == 4) {
+      return <span className='critique_name'>Sokka</span>
+    } else if(post.criticId == 5) {
+      return <span className='critique_name'>Zuko</span>
+    } else if(post.criticId == 6) {
+      return <span className='critique_name'>Katara</span>
+    } else if(post.criticId == 7) {
+      return <span className='critique_name'>Toph</span>
+    } else if(post.criticId == 8) {
+      return <span className='critique_name'>Iroh</span>
+    } else if(post.criticId == 9) {
+      return <span className='critique_name'>Azula</span>
+    } else if(post.criticId == 10) {
+      return <span className='critique_name'>Cabbage Guy</span>
     }
   }
 
@@ -59,8 +77,20 @@ export default function SmallPost({ post, user }) {
       <div className="card">
 
         <div className='card__desc'>
-          {/* <h2>{post.description}</h2> */}
-          <h2>Why did you choose not to kill fire lord Ozai? How did it benefit the world?</h2>
+          <h2>{post.description}</h2>
+          <div className='card__icon'>
+            <img
+              src={isLiked ? redHeart : blankHeart}
+              alt='post like button'
+              onClick={() => likeHandler()}
+            />
+
+            {/* {isLiked ? heartFill() : heartEmpty()} */}
+            <span className='card__likes'>
+              {likeCount()}
+            </span>
+
+          </div>
         </div>
 
         <div className='card__footer'>
@@ -73,18 +103,7 @@ export default function SmallPost({ post, user }) {
 
         </div>
 
-        <div className='card__icon'>
-          <img
-            src={isLiked ? redHeart : blankHeart}
-            alt='post like button'
-            onClick={() => likeHandler()}
-          />
-          {/* {isLiked ? heartFill() : heartEmpty()} */}
-          <span className='card__likes'>
-            {likeCount()}
-          </span>
 
-        </div>
 
         <div className='card__commentform'>
           <CommentForm postId={post.id}/>

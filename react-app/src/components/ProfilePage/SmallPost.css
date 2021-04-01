@@ -24,7 +24,10 @@
   margin-bottom: 0px;
   font-size: 16px;
   font-weight: bold;
-  color:rgb(83, 83, 83)
+  color:rgb(83, 83, 83);
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .card__footer {
@@ -46,6 +49,9 @@
 
 .card__icon {
   margin-left: 15px;
+  margin-top: 5px;
+
+  position: relative;
 }
 
 .card__icon img {
@@ -54,4 +60,20 @@
 
 .card__likes {
   height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 62px;
+  left: 65px;
+  transform: translate(-50px, -50px);
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.critique_name {
+  color: rgba(55, 55, 255, 0.527);
+}
+
+.card__icon:hover {
+  opacity: 50%;
 }

@@ -1,0 +1,86 @@
+[
+  {
+    "userId": 4,
+    "criticId": 0,
+    "description": "Why don't you get a girlfriend already?",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 3,
+    "criticId": 0,
+    "description": "If you are really the Avatar, why haven't you killed the Fire Lord??",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 4,
+    "criticId": 2,
+    "description": "Despite everyone making fun of you, I find your jokes and sarcasm hilarious!",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 4,
+    "criticId": 6,
+    "description": "Your sarcasm can get obnoxious sometimes",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 2,
+    "criticId": 0,
+    "description": "You need to take better care of your health",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 2,
+    "criticId": 0,
+    "description": "You really need to get a haircut",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 2,
+    "criticId": 8,
+    "description": "I know you struggle with anxiety, I recommend tea",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 3,
+    "criticId": 0,
+    "description": "I can tell you are struggling with love, you should build the confidence to ask her out",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 4,
+    "criticId": 5,
+    "description": "Hello! Zuko Here! If you hope to ever take Ozai down you need to work on your firebending, and I think I can help.",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 7,
+    "criticId": 0,
+    "description": "Why are you always so rude and inconsiderate??",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 10,
+    "criticId": 0,
+    "description": "Is that your cart on fire over there?",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  },
+  {
+    "userId": 5,
+    "criticId": 9,
+    "description": "Your a pathetic excuse for a brother and will never earn father's love",
+    "private": false,
+    "imagePath": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+  }
+]
