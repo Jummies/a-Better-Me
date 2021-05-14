@@ -18,7 +18,7 @@ body {
   display: flex;
   height: calc(100vh);
   /* background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 100%); */
-  background-image: url('https://cdn.discordapp.com/attachments/537497024958824480/824580397966295070/unknown.png');
+  /* background-image: url('https://cdn.discordapp.com/attachments/537497024958824480/824580397966295070/unknown.png'); */
   /* background-image: linear-gradient(to right, rgba(255, 0, 0, 0) , yellow); */
   background-size: cover;
   
@@ -34,11 +34,7 @@ body {
 
 
   overflow-y: scroll;
-  /* background-color: rgba(255, 255, 255, 0.466);
-  /* box-shadow: inset 0 0 20px #2c2c2c70; */
-  /* background-image: linear-gradient(to bottom, url('https://cdn.discordapp.com/attachments/537497024958824480/824580397966295070/unknown.png'), rgb(0, 0, 0)); */
-  /* mix-blend-mode: hard-light; */ 
-  
+
 
 
 }

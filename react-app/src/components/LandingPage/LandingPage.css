@@ -6,7 +6,7 @@
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 30s ease infinite;
-  opacity: 75%;
+  opacity: .75;
   
 
 }
@@ -65,7 +65,7 @@
   position:fixed;
   margin: 10px;
   margin-top: -33px;
-  opacity: 70%;
+  opacity: .7;
 
 }
 
@@ -87,6 +87,6 @@
 }
 
 .pp:hover {
-  opacity: 50%;
+  opacity: .5;
 }
 
