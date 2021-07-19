@@ -9,7 +9,7 @@ def seed_users():
         email='demo@aa.io',
         hashed_password=generate_password_hash('password'),
         biography="Tired of being a demo? Sign up!",
-        profilePicture='https://cdn.discordapp.com/attachments/610041795451158533/824257170954518548/IMG_6215.png'
+        profilePicture='https://upload.wikimedia.org/wikipedia/commons/7/7e/Appacademylogo.png'
     )
 
     jummy = User(
@@ -17,7 +17,7 @@ def seed_users():
         email='jummy@aa.io',
         hashed_password=generate_password_hash('jummy'),
         biography="Hello! My name is Jummy, and I am a student at App Academy.",
-        profilePicture='https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/15110243_10211398981949453_2553713015301440169_o.jpg?_nc_cat=111&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=_ZTkk69HvQwAX-_nj0m&_nc_ht=scontent-atl3-1.xx&oh=1faf1aa07d529a0c85992fe3fd5522c4&oe=607F1095'
+        profilePicture='https://avatars.githubusercontent.com/u/74935506?v=4'
     )
 
     aang = User(
@@ -84,7 +84,7 @@ def seed_users():
         profilePicture='https://1.bp.blogspot.com/-24mjP6SQK_c/XuAdsmjSh3I/AAAAAAABUIo/zwFQ8PZhBdk7Irxek_-76DLdqDmx24IGgCNcBGAsYHQ/s1600/avatar-the-last-airbender-cabbage-merchant-header-nickelodeon-nick_2.png'
     )
 
-    db.session.add(demo)
+
     db.session.add(jummy)
     db.session.add(aang)
     db.session.add(sokka)
@@ -94,7 +94,7 @@ def seed_users():
     db.session.add(iroh)
     db.session.add(azula)
     db.session.add(cabbageguy)
-
+    db.session.add(demo)
     db.session.commit()
 
 # Uses a raw SQL query to TRUNCATE the users table.
