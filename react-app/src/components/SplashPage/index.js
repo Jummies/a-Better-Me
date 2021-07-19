@@ -51,7 +51,7 @@ function Splash({ authenticated, setAuthenticated }) {
 
                             <div className="signup">
                                 <div>
-                                    <span onClick={signUpRedirect} style={{ cursor: 'pointer', color: '#0095f6' }}>Sign Up</span>
+                                    <span onClick={signUpRedirect} style={{ cursor: 'pointer', color: '#ffffff' }}>Sign Up</span>
                                 </div>
                             </div>
                         </div>

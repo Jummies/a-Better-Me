@@ -23,10 +23,9 @@
 .login {
   display: inline-block;
   width: 50rem;
-  /* height: 37.86rem;
-  width: 38rem;
-  border: 1px solid #CCCCCC;
-  background-color: #ffff; */
+  height: 20rem;
+
+
   
 }
 
@@ -35,6 +34,7 @@
   background-color: rgb(254, 255, 199);
   width: 80%;
   height: 3rem;
+  margin-top: 20px;
   margin-left: 3.3rem;
   border: none;
 
@@ -52,7 +52,7 @@
   
   text-decoration: none;
   text-align: center;
-  font-size: large;
+  font-size: small;
 
   /* background-color: rgb(254, 255, 199);
   width: 80%;

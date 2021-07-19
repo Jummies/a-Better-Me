@@ -1,6 +1,6 @@
 .loginForm {
   width: 100%;
-  background-color: #ffff;
+
 }
 .loginForm div {
 
@@ -17,6 +17,7 @@
   border: none;
   border-radius: .5rem;
   margin-left: 3.3rem;
+
   background-color: #FAFAFA;
   outline: none;
 }
@@ -27,6 +28,7 @@
   width: 80%;
   height: 3rem;
   margin-left: 3.3rem;
+  margin-top: 10px;
   border: none;
   background-color: #addcfc;
 
