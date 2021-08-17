@@ -4,7 +4,6 @@ import botocore
 from flask import Blueprint, jsonify, request
 from flask_login import login_required
 from app.models import db, Post
-from flask_login import login_required
 from app.forms import NewPostForm, EditPostForm
 
 from app.config import Config

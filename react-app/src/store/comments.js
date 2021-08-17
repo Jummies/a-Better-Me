@@ -1,6 +1,7 @@
 const SET_COMMENTS = 'COMMENTS/SET_COMMENTS';
 const CREATE_COMMENTS = 'COMMENTS/CREATE_COMMENTS';
 const REMOVE_COMMENTS = 'COMMENTS/REMOVE_COMMENTS';
+// const UPDATE_COMMENTS = 'COMMENTS/UPDATE_COMMENTS';
 
 const setComments = (comments) => {
     return {
@@ -25,12 +26,13 @@ const removeComments = (id) => {
 
 
 export const getComments = () => async (dispatch) => {
-    const response = await fetch('/api/comments');
+    const response = await fetch('https://a-better-me.herokuapp.com/api/comments/');
+    //const response = await fetch('/api/comments');
     if (response.ok) {
-        const res = await response.json()
+        let res = await response.json()
         dispatch(setComments(res.comments));
-        return response;
     }
+    return response;
 };
 
 export const createComment = (userId, postId, content) => async (dispatch) => {
@@ -42,11 +44,11 @@ export const createComment = (userId, postId, content) => async (dispatch) => {
       },
       body: JSON.stringify({ userId, postId, content })
     }
-    const res = await fetch('/api/comments/', options)
-    if (!res.ok) alert('issue')
+    const res = await fetch('/api/comments', options)
+    // if (!res.ok) alert('issue')
     const data = await res.json()
 
-    return dispatch(setComments([data]));
+    dispatch(setComments([data]));
 
 };
 
@@ -78,9 +80,11 @@ const initialState = {};
 const commentsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_COMMENTS:
+            console.log('testy test');
             const comments = action.comments.reduce((acc, ele) => {
                 acc[ele.id] = ele;
-                return acc
+                return acc;
+
             }, {});;
             return { ...state, ...comments };
 

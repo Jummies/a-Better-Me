@@ -110,6 +110,7 @@ const Post = ({ post, user }) => {
         <div className='comment__container2'>
           <div className='post__comments'>
             {/* pass user in as props to Comments */}
+            { console.log("post id: ", post.id)}
             <Comments postId={post.id} />
           </div>
         </div>

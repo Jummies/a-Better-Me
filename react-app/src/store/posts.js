@@ -133,7 +133,8 @@ const postsReducer = (state = initialState, action) => {
       }, {});
       return { ...state, ...posts };
     case CREATE_POSTS:
-      return { ...state, [action.drink.id]: action.drink };
+      // return { ...state, [action.drink.id]: action.drink };
+      return { ...state, [action.posts.id]: action.posts };
     case REMOVE_POST:
       const newState = { ...state };
       delete newState[action.id];

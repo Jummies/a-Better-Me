@@ -8,14 +8,15 @@ import Post from "./Post";
 
 const Posts = () => {
   const user = useSelector((state) => state.session.user);
-  const posts = useSelector((state) =>
-    Object.values(state.posts).filter((post) => post.userId !== user.id)
-  );
+  const posts = useSelector((state) => {
+    console.log("state x: ", state)
+    return Object.values(state.posts).filter((post) => post.userId !== user.id)
+  });
 
   const [isLoaded, setIsLoaded] = useState(false);
   const dispatch = useDispatch();
 
-  console.log('posts: ', posts)
+  // console.log('posts: ', posts)
   useEffect(() => {
     if (posts && user) setIsLoaded(true);
   }, [posts, user]);

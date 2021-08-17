@@ -84,7 +84,7 @@ def seed_users():
         profilePicture='https://1.bp.blogspot.com/-24mjP6SQK_c/XuAdsmjSh3I/AAAAAAABUIo/zwFQ8PZhBdk7Irxek_-76DLdqDmx24IGgCNcBGAsYHQ/s1600/avatar-the-last-airbender-cabbage-merchant-header-nickelodeon-nick_2.png'
     )
 
-
+    db.session.add(demo)
     db.session.add(jummy)
     db.session.add(aang)
     db.session.add(sokka)
@@ -94,7 +94,7 @@ def seed_users():
     db.session.add(iroh)
     db.session.add(azula)
     db.session.add(cabbageguy)
-    db.session.add(demo)
+
     db.session.commit()
 
 # Uses a raw SQL query to TRUNCATE the users table.
