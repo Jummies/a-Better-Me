@@ -47,7 +47,7 @@ const NavSide = () => {
         My Wishes
       </NavLink> */}
 
-      <NavLink
+      {/* <NavLink
         activeClassName='sidenav__links--active'
         className='sidenav__links'
         className='aaa3'
@@ -65,7 +65,7 @@ const NavSide = () => {
       >
         <i className='sidenav__icons fas fa-cog' />
         
-      </NavLink>
+      </NavLink> */}
 
       </div>
       
